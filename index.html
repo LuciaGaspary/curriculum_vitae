@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="pt-br">  
+
+<head>
+    <meta charset="UTF-8"> <!--BIBLIOTECA LINGUAGEM LATINA-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--COMPATIBILIDADE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--COMPATIBILIDADE-->
+    <link rel="stylesheet" href="css/reset.css"> <!--RETIRA A FORMATAÇÃO DO HTML-->
+    <link rel="stylesheet" href="css/style.css"> <!--LINK CSS-->
+    <link rel="icon" href="imagens/icone2.png"> <!--ÍCONE NA ABA-->
+    <title>Curriculo Vitae</title>
+</head>
+
+<body>
+    <div class="interface corpo">
+    <header class="cabecalho">
+        <h1 onclick="mensagem()" class="cursor-pointer">Curriculo Vitae - Lucia Gaspary Gomez</h1>
+        <img class="foto" src="imagens/perfil.jpg" width="200" id="perfil-cor" onmousemove="mudaFoto(1)" onmouseout="mudaFoto(2)" onclick="mudaFoto(3)">
+
+        <script>
+            function mensagem() {
+                alert ("Estou buscando novo emprego!");
+            }
+
+            var escalaCinza = false;
+            function mudaFoto(tipo) {
+                if (tipo == 1) {
+                    arquivo = "imagens/perfil_pb.JPG";
+                } 
+                if (tipo == 2) {
+                    arquivo = "imagens/perfil.jpg";
+                }
+                if (tipo == 3) {
+                    arquivo = "imagens/perfil_pb.JPG";
+                }
+                if (!escalaCinza){
+                document.getElementById("perfil-cor").src= arquivo;
+                    if (tipo == 3) {
+                        escalaCinza = true;
+                    }
+                }
+            }
+        </script> 
+
+        <section class="audio">
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0rCrO4CFRfM?utm_source=generator&theme=0"  height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div>
+            <nav><!--MENU DE NAVEGAÇÃO-->
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="formacao.html">Formação Acadêmica</a></li>
+                    <li><a href="cursos.html">Cursos Realizados</a></li>
+                    <li><a href="experiencia.html">Experiência Profissional</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hgroup>
+            <h2 class="titulo">Apresentação</h2>
+            <p class="apresentacao">
+            Me Chamo Lucia, sou formada em Engenharia Civil pela Universidade Católica de Pelotas (UCPEL) no ano 2019.
+            Atualmente estudo <b class="ads">Tecnologia em Análise e Desenvolvimento de Sistemas</b> na mesma universidade. 
+            Sou uma pessoa que tem seus objetivos bem definidos, sou dedicada às atividades as quais me disponho em executar e muito atenciosa aos detalhes.
+            Valorizo o trabalho em equipe, respeito e dedicação não somente no ambiente de trabalho mas como em todos os ambitos da vida.</p>
+        </hgroup>
+        
+        <hgroup>
+            <h2 class="titulo">Dados Pessoais</h2>
+            <p class="texto">
+            Nome: Lucia Gaspary Gomez<br> 
+            Gênero: Feminino<br>
+            Estado Civil: Solteira<br>
+            Data de nascimento: 01/01/1992<br>
+            </p>
+        </hgroup>
+
+			<section class="mapa">
+				<p>Resido na cidade de Pelotas, Rio Grande do Sul <br>Estou disponível para trabalho em modelo remoto ou presencial em minha cidade de residência.</p>
+				<div class="mapa-conteudo">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27135.01625433434!2d-52.36089123267059!3d-31.773839668196295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5945aa7eb05%3A0x2eaea54de04152e7!2sCentro%2C%20Pelotas%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1666900821400!5m2!1spt-BR!2sbr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</section>
+    </main>
+
+        <div class="texto-data">
+        <script>
+           document.write("Olá! Hoje é dia " + Date());
+        </script>
+        </div>
+    </div>
+
+    <footer class="config-footer"> 
+        <a href="https://www.linkedin.com/in/lucia-g-291060221/" target="_blank"><img src="imagens/logo-linkedin.png" alt="Linkedin" width="35px"></a>
+        <a href="https://github.com/LuciaGaspary" target="_blank"><img src="imagens/logo-github.png" alt="GitHub" width="35px"></a>
+        <a href="https://www.instagram.com/luciagaspary/" target="_blank"><img src="imagens/logo-instagram.png" alt="Instagram" width="35px"></a>
+        <p class="copyright">&copy; Copyright 2022</p>
+    </footer> 
+</body>
+</html>
